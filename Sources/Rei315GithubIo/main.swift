@@ -27,5 +27,5 @@ try Rei315GithubIo().publish(using: [
     .generateHTML(withTheme: .foundation),
     .generateRSSFeed(including: [.posts]),
     .generateSiteMap(),
-    .deploy(using: .gitHub("rei315/rei315.github.io", useSSH: false))
+    .deploy(using: .gitHub("rei315/rei315.github.io", useSSH: true))
 ])
