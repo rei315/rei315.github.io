@@ -14,7 +14,7 @@ struct Rei315GithubIo: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://rei315.github.io/")!
+    var url = URL(string: "https://rei315.github.io")!
     var name = "Rei315GithubIo"
     var description = "A description of Rei315GithubIo"
     var language: Language { .english }
