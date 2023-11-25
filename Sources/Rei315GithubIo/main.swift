@@ -15,9 +15,12 @@ struct Rei315GithubIo: Website {
 
     // Update these properties to configure your website:
     var url = URL(string: "https://rei315.github.io")!
-    var name = "Rei315GithubIo"
-    var description = "A description of Rei315GithubIo"
-    var language: Language { .english }
+    var name = "猫が好きなエンジニアさん"
+    var description = """
+Appleプラットフォーム、Metal開発が好きです。
+最近はNLPに興味があります。
+"""
+    var language: Language { .japanese }
     var imagePath: Path? { nil }
 }
 
