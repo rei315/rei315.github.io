@@ -1,0 +1,397 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "nyao.aboutapp.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "From quick sketches to live annotations during meetings and presentations, Nyao helps you draw right on top of your screen.<br>\nWith a transparent canvas, Nyao works naturally over other apps, making it easy to sketch and annotate in context. Highlight key points and explain ideas instantly while viewing documents, web pages, design comps, or slides. Powered by Metal-based rendering, Nyao delivers lightweight performance, fast responsiveness, and smooth, fluid strokes."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シンプルなスケッチから会議・プレゼン中のライブ注釈まで、Nyao Sketchなら画面上にそのまま描き込めます。<br>\nNyao Sketchは透明キャンバスを使って、ほかのアプリの上から自然に描画できるスケッチ／注釈アプリです。ドキュメント、Web、デザインカンプ、スライドを見ながら要点をすぐに強調・説明でき、Metalベースのレンダリングにより、軽快なレスポンスと滑らかなストロークを実現します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "간단한 스케치부터 회의·발표 중 실시간 주석까지, Nyao로 화면 위에 바로 그려보세요.<br>\nNyao는 투명 캔버스를 통해 다른 앱 위에서도 자연스럽게 그릴 수 있는 스케치/주석 앱입니다.<br>\n문서, 웹, 디자인 시안, 슬라이드를 보면서 핵심을 즉시 강조하고 설명할 수 있으며,\nMetal 기반 렌더링으로 가볍고 빠른 반응성과 부드러운 스트로크를 제공합니다."
+          }
+        }
+      }
+    },
+    "nyao.aboutapp.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyao, a real-time sketch tool that lets you draw directly on your screen"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画面上に直接描ける、リアルタイムスケッチツール「Nyao Sketch」"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "화면 위에 바로 그리는 실시간 스케치 툴, Nyao"
+          }
+        }
+      }
+    },
+    "nyao.description.feature.0" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transparent Canvas Overlay: Draw as if layering over other apps, with freely adjustable canvas opacity"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "透明キャンバスオーバーレイ：ほかのアプリに重ねて描く感覚で作業でき、キャンバスの透明度も自由に調整"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "투명 캔버스 오버레이: 다른 앱 위에 겹쳐 그리듯 작업하고, 캔버스 투명도를 자유롭게 조절"
+          }
+        }
+      }
+    },
+    "nyao.description.feature.1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quick Show/Hide Window: Bring it up instantly when needed, and hide it cleanly when you don’t"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウィンドウの素早い表示／非表示：必要なときにすぐ表示し、不要なときはすっきり隠せる"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빠른 창 표시/숨김: 필요할 때 즉시 띄우고, 필요 없을 때는 깔끔하게 숨김"
+          }
+        }
+      }
+    },
+    "nyao.description.feature.2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Draw Mode / Click-Through Mode: Switch input behavior depending on your workflow"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ドローモード／クリックスルーモード：シーンに合わせてキャンバス入力方式を切り替え"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "드로우 모드 / 클릭스루 모드: 상황에 맞게 캔버스 입력 방식을 전환"
+          }
+        }
+      }
+    },
+    "nyao.description.feature.3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom Brush Presets: Set up frequently used brushes to match your drawing style"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カスタムブラシ登録：よく使うブラシを自分の作業スタイルに合わせて構成"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커스텀 브러시 등록: 자주 쓰는 브러시를 내 작업 스타일에 맞게 구성"
+          }
+        }
+      }
+    },
+    "nyao.description.feature.4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Files & Export PNG: Save your work and share results with ease"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ファイル保存・PNG書き出し：作業結果を手軽に保存・共有"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파일 저장 및 PNG 내보내기: 작업 결과를 간편하게 저장하고 공유"
+          }
+        }
+      }
+    },
+    "nyao.description.feature.5" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shortcut Customization: Reassign selected shortcuts to your preferred keys"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショートカットのカスタマイズ：一部ショートカットを好みのキーに変更可能"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단축키 커스터마이징: 일부 단축키를 원하는 키로 자유롭게 변경"
+          }
+        }
+      }
+    },
+    "nyao.description.feature.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Key Features"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主な機能"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주요 기능"
+          }
+        }
+      }
+    },
+    "nyao.description.scene.0" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marking up and explaining key points live while screen sharing in meetings or presentations"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会議・プレゼン中、画面共有しながら要点をその場で示して説明したいとき"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미팅/발표 중 화면 공유와 함께 핵심 내용을 즉석에서 표시하고 설명할 때"
+          }
+        }
+      }
+    },
+    "nyao.description.scene.1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leaving fast visual feedback—checks, highlights, and quick sketches—over browsers, documents, or design tools"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ブラウザ・ドキュメント・デザインツール上にチェックやマーキング、ラフな書き込みで素早くフィードバックしたいとき"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "브라우저·문서·디자인 툴 위에 체크, 표시, 낙서로 빠르게 의견을 남길 때"
+          }
+        }
+      }
+    },
+    "nyao.description.scene.2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tracing references on a transparent canvas or blocking out compositions quickly"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リファレンスを見ながら、透明キャンバスでトレースしたり構図を素早く検討したいとき"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "레퍼런스를 보며 투명 캔버스로 트레이싱하거나 구도를 빠르게 잡을 때"
+          }
+        }
+      }
+    },
+    "nyao.description.scene.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Great For Moments Like These"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "こんなシーンで活躍します"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이런 순간에 유용해요"
+          }
+        }
+      }
+    },
+    "nyao.feature.0" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A macOS-exclusive app"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS専用アプリ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 전용 앱"
+          }
+        }
+      }
+    },
+    "nyao.summary" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "From quick sketches to live annotations during meetings and presentations, draw directly on your screen with Nyao."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "簡単なスケッチから会議・プレゼン中のリアルタイム注釈まで、Nyao Sketchで画面上にそのまま描き込めます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "간단한 스케치부터 회의·발표 중 실시간 주석까지, Nyao로 화면 위에 바로 그려보세요."
+          }
+        }
+      }
+    },
+    "nyao.tagline" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sketch, Canvas, Presentation"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケッチ、キャンバス、プレゼンテーション"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스케치, 캔버스, 프레젠테이션"
+          }
+        }
+      }
+    },
+    "nyao.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyao"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyao Sketch"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyao"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.1"
+}
