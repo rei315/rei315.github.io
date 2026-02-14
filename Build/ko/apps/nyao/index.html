@@ -10,50 +10,6 @@
     <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
     <link href="/css/ignite-core.min.css" rel="stylesheet" />
     <link href="https://rei315.github.io/ko/apps/nyao" rel="canonical" />
-    <script>(function() {
-    function getThemePreference() {
-        return localStorage.getItem('custom-theme') || 'auto';
-    }
-
-    function applyTheme(themeID) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
-        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
-        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
-
-        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
-        document.documentElement.setAttribute('data-theme-state', themeID);
-    }
-
-    function applySyntaxTheme() {
-        const syntaxTheme = getComputedStyle(document.documentElement)
-            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
-
-        if (!syntaxTheme) return;
-
-        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
-            link.setAttribute('disabled', 'disabled');
-        });
-
-        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
-        if (themeLink) {
-            themeLink.removeAttribute('disabled');
-        }
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        const currentTheme = getThemePreference();
-        if (currentTheme === 'auto') {
-            applyTheme('auto');
-            applySyntaxTheme();
-        }
-    });
-
-    const savedTheme = getThemePreference();
-    applyTheme(savedTheme);
-    applySyntaxTheme();
-})();
-</script>
     <meta property="og:site_name" content="Rei Blog" />
     <meta property="og:title" content="Nyao" />
     <meta name="twitter:title" content="Nyao" />
@@ -63,6 +19,14 @@
     <meta name="twitter:dnt" content="on" />
     <link href="/css/site.css" rel="stylesheet" />
     <link href="/css/ambient.css" rel="stylesheet" />
+    <script>(() => {
+  const root = document.documentElement;
+  root.setAttribute('data-bs-theme', 'light');
+  root.setAttribute('data-theme-state', 'light');
+  try {
+    localStorage.setItem('custom-theme', 'light');
+  } catch (_) {}
+})();</script>
   </head>
   <body>
     <canvas id="ambient-canvas" data-ambient-season="winter" aria-hidden="true" class="ambient-canvas"></canvas>
@@ -133,6 +97,7 @@
           <li><p class="m-0">브라우저·문서·디자인 툴 위에 체크, 표시, 낙서로 빠르게 의견을 남길 때</p></li>
           <li><p class="m-0">레퍼런스를 보며 투명 캔버스로 트레이싱하거나 구도를 빠르게 잡을 때</p></li>
         </ul>
+        <a href="/ko/apps/nyao/faq" class="apps-detail-faq-link mt-5">자주 묻는 질문</a>
         <a href="/ko/apps" class="apps-detail-back">Back to Apps</a>
       </div>
     </div>

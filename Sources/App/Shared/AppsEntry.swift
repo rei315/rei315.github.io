@@ -141,4 +141,8 @@ public struct AppsEntry: StaticPage, Identifiable {
     let base = page <= 1 ? "apps" : "apps/page/\(page)"
     return language.prefixedPath(base)
   }
+
+  public static func faqPath(for appID: String, language: SupportedLanguage) -> String {
+    language.prefixedPath("apps/\(appID)/faq")
+  }
 }
