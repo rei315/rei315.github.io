@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Rei315" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>Nyao Sketch</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://rei315.github.io/ja/apps/nyao" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Rei Blog" />
+    <meta property="og:title" content="Nyao Sketch" />
+    <meta name="twitter:title" content="Nyao Sketch" />
+    <meta property="og:url" content="https://rei315.github.io/ja/apps/nyao" />
+    <meta name="twitter:domain" content="rei315.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <link href="/css/site.css" rel="stylesheet" />
+    <link href="/css/ambient.css" rel="stylesheet" />
+  </head>
+  <body>
+    <canvas id="ambient-canvas" data-ambient-season="winter" aria-hidden="true" class="ambient-canvas"></canvas>
+    <div class="page-frame">
+      <div class="language-switcher-row">
+        <span class="language-switcher"><a href="/apps/nyao" class="language-switcher__link">English</a><a href="/ko/apps/nyao" class="language-switcher__link">한국어</a><a href="/ja/apps/nyao" class="language-switcher__link language-switcher__link--active">日本語</a></span>
+      </div>
+      <header>
+        <nav class="navbar navbar-expand-md">
+          <div class="container flex-wrap flex-lg-nowrap">
+            <div class="me-2 me-md-auto">
+              <a href="/" class="d-inline-flex align-items-center navbar-brand"><span class="navbar-brand-group"></span></a>
+              <a href="/ja" class="navbar-brand">Rei Blog</a>
+            </div>
+            <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+              <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
+                <li class="nav-item"><a href="/ja/develop" class="nav-link text-nowrap">Develop</a></li>
+                <li class="nav-item"><a href="/ja/apps" class="nav-link text-nowrap">Apps</a></li>
+                <li class="nav-item"><a href="/ja/info" class="nav-link text-nowrap">Info</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="ig-main-content">
+        <div style="padding-top: 32px; padding-bottom: 32px">
+          <div class="apps-detail-hero">
+            <img src="/images/nyao_app_icon.png" alt="Nyao Sketch icon" class="apps-detail-icon" />
+            <div class="apps-detail-heading">
+              <h1>Nyao Sketch</h1>
+              <p class="apps-detail-tagline">スケッチ、キャンバス、プレゼンテーション</p>
+            </div>
+          </div>
+          <p class="lead mt-3">簡単なスケッチから会議・プレゼン中のリアルタイム注釈まで、Nyao Sketchで画面上にそのまま描き込めます。</p>
+        </div>
+        <div class="apps-detail-grid">
+          <div class="apps-detail-card">
+            <h3>Key features</h3>
+            <ul>
+              <p>macOS専用アプリ</p>
+            </ul>
+          </div>
+          <div class="apps-detail-card">
+            <h3>Tech stack</h3>
+            <div class="apps-detail-stack">
+              <span class="apps-badge">AppKit</span>
+              <span class="apps-badge">SwiftUI</span>
+              <span class="apps-badge">Metal</span>
+              <span class="apps-badge">CoreGraphics</span>
+            </div>
+          </div>
+        </div>
+        <h3>画面上に直接描ける、リアルタイムスケッチツール「Nyao Sketch」</h3>
+        <p>シンプルなスケッチから会議・プレゼン中のライブ注釈まで、Nyao Sketchなら画面上にそのまま描き込めます。<br /> Nyao Sketchは透明キャンバスを使って、ほかのアプリの上から自然に描画できるスケッチ／注釈アプリです。ドキュメント、Web、デザインカンプ、スライドを見ながら要点をすぐに強調・説明でき、Metalベースのレンダリングにより、軽快なレスポンスと滑らかなストロークを実現します。</p>
+        <h3 class="mt-5">主な機能</h3>
+        <ul>
+          <li><p class="m-0">透明キャンバスオーバーレイ：ほかのアプリに重ねて描く感覚で作業でき、キャンバスの透明度も自由に調整</p></li>
+          <li><p class="m-0">ウィンドウの素早い表示／非表示：必要なときにすぐ表示し、不要なときはすっきり隠せる</p></li>
+          <li><p class="m-0">ドローモード／クリックスルーモード：シーンに合わせてキャンバス入力方式を切り替え</p></li>
+          <li><p class="m-0">カスタムブラシ登録：よく使うブラシを自分の作業スタイルに合わせて構成</p></li>
+          <li><p class="m-0">ファイル保存・PNG書き出し：作業結果を手軽に保存・共有</p></li>
+          <li><p class="m-0">ショートカットのカスタマイズ：一部ショートカットを好みのキーに変更可能</p></li>
+        </ul>
+        <h3 class="mt-5">こんなシーンで活躍します</h3>
+        <ul>
+          <li><p class="m-0">会議・プレゼン中、画面共有しながら要点をその場で示して説明したいとき</p></li>
+          <li><p class="m-0">ブラウザ・ドキュメント・デザインツール上にチェックやマーキング、ラフな書き込みで素早くフィードバックしたいとき</p></li>
+          <li><p class="m-0">リファレンスを見ながら、透明キャンバスでトレースしたり構図を素早く検討したいとき</p></li>
+        </ul>
+        <a href="/ja/apps" class="apps-detail-back">Back to Apps</a>
+      </div>
+    </div>
+    <script src="/js/ambient.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

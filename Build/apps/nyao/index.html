@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Rei315" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>Nyao</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://rei315.github.io/apps/nyao" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Rei Blog" />
+    <meta property="og:title" content="Nyao" />
+    <meta name="twitter:title" content="Nyao" />
+    <meta property="og:url" content="https://rei315.github.io/apps/nyao" />
+    <meta name="twitter:domain" content="rei315.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <link href="/css/site.css" rel="stylesheet" />
+    <link href="/css/ambient.css" rel="stylesheet" />
+  </head>
+  <body>
+    <canvas id="ambient-canvas" data-ambient-season="winter" aria-hidden="true" class="ambient-canvas"></canvas>
+    <div class="page-frame">
+      <div class="language-switcher-row">
+        <span class="language-switcher"><a href="/apps/nyao" class="language-switcher__link language-switcher__link--active">English</a><a href="/ko/apps/nyao" class="language-switcher__link">한국어</a><a href="/ja/apps/nyao" class="language-switcher__link">日本語</a></span>
+      </div>
+      <header>
+        <nav class="navbar navbar-expand-md">
+          <div class="container flex-wrap flex-lg-nowrap">
+            <div class="me-2 me-md-auto">
+              <a href="/" class="d-inline-flex align-items-center navbar-brand"><span class="navbar-brand-group"></span></a>
+              <a href="/" class="navbar-brand">Rei Blog</a>
+            </div>
+            <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+              <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
+                <li class="nav-item"><a href="/develop" class="nav-link text-nowrap">Develop</a></li>
+                <li class="nav-item"><a href="/apps" class="nav-link text-nowrap">Apps</a></li>
+                <li class="nav-item"><a href="/info" class="nav-link text-nowrap">Info</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="ig-main-content">
+        <div style="padding-top: 32px; padding-bottom: 32px">
+          <div class="apps-detail-hero">
+            <img src="/images/nyao_app_icon.png" alt="Nyao icon" class="apps-detail-icon" />
+            <div class="apps-detail-heading">
+              <h1>Nyao</h1>
+              <p class="apps-detail-tagline">Sketch, Canvas, Presentation</p>
+            </div>
+          </div>
+          <p class="lead mt-3">From quick sketches to live annotations during meetings and presentations, draw directly on your screen with Nyao.</p>
+        </div>
+        <div class="apps-detail-grid">
+          <div class="apps-detail-card">
+            <h3>Key features</h3>
+            <ul>
+              <p>A macOS-exclusive app</p>
+            </ul>
+          </div>
+          <div class="apps-detail-card">
+            <h3>Tech stack</h3>
+            <div class="apps-detail-stack">
+              <span class="apps-badge">AppKit</span>
+              <span class="apps-badge">SwiftUI</span>
+              <span class="apps-badge">Metal</span>
+              <span class="apps-badge">CoreGraphics</span>
+            </div>
+          </div>
+        </div>
+        <h3>Nyao, a real-time sketch tool that lets you draw directly on your screen</h3>
+        <p>From quick sketches to live annotations during meetings and presentations, Nyao helps you draw right on top of your screen.<br /> With a transparent canvas, Nyao works naturally over other apps, making it easy to sketch and annotate in context. Highlight key points and explain ideas instantly while viewing documents, web pages, design comps, or slides. Powered by Metal-based rendering, Nyao delivers lightweight performance, fast responsiveness, and smooth, fluid strokes.</p>
+        <h3 class="mt-5">Key Features</h3>
+        <ul>
+          <li><p class="m-0">Transparent Canvas Overlay: Draw as if layering over other apps, with freely adjustable canvas opacity</p></li>
+          <li><p class="m-0">Quick Show/Hide Window: Bring it up instantly when needed, and hide it cleanly when you don’t</p></li>
+          <li><p class="m-0">Draw Mode / Click-Through Mode: Switch input behavior depending on your workflow</p></li>
+          <li><p class="m-0">Custom Brush Presets: Set up frequently used brushes to match your drawing style</p></li>
+          <li><p class="m-0">Save Files &amp; Export PNG: Save your work and share results with ease</p></li>
+          <li><p class="m-0">Shortcut Customization: Reassign selected shortcuts to your preferred keys</p></li>
+        </ul>
+        <h3 class="mt-5">Great For Moments Like These</h3>
+        <ul>
+          <li><p class="m-0">Marking up and explaining key points live while screen sharing in meetings or presentations</p></li>
+          <li><p class="m-0">Leaving fast visual feedback—checks, highlights, and quick sketches—over browsers, documents, or design tools</p></li>
+          <li><p class="m-0">Tracing references on a transparent canvas or blocking out compositions quickly</p></li>
+        </ul>
+        <a href="/apps" class="apps-detail-back">Back to Apps</a>
+      </div>
+    </div>
+    <script src="/js/ambient.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

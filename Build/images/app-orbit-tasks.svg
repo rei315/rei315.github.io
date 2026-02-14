@@ -1,0 +1,13 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Orbit Tasks icon">
+  <defs>
+    <linearGradient id="orbit-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8d7ff"/>
+      <stop offset="1" stop-color="#9ad0c2"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="224" height="224" rx="52" fill="url(#orbit-bg)"/>
+  <circle cx="128" cy="128" r="60" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="10"/>
+  <circle cx="128" cy="128" r="36" fill="none" stroke="#1d7fa3" stroke-width="10"/>
+  <circle cx="176" cy="96" r="10" fill="#ffffff"/>
+  <circle cx="92" cy="168" r="8" fill="#ffffff"/>
+</svg>

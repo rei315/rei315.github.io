@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Rei315" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>Nyao</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://rei315.github.io/ko/apps/nyao" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Rei Blog" />
+    <meta property="og:title" content="Nyao" />
+    <meta name="twitter:title" content="Nyao" />
+    <meta property="og:url" content="https://rei315.github.io/ko/apps/nyao" />
+    <meta name="twitter:domain" content="rei315.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <link href="/css/site.css" rel="stylesheet" />
+    <link href="/css/ambient.css" rel="stylesheet" />
+  </head>
+  <body>
+    <canvas id="ambient-canvas" data-ambient-season="winter" aria-hidden="true" class="ambient-canvas"></canvas>
+    <div class="page-frame">
+      <div class="language-switcher-row">
+        <span class="language-switcher"><a href="/apps/nyao" class="language-switcher__link">English</a><a href="/ko/apps/nyao" class="language-switcher__link language-switcher__link--active">한국어</a><a href="/ja/apps/nyao" class="language-switcher__link">日本語</a></span>
+      </div>
+      <header>
+        <nav class="navbar navbar-expand-md">
+          <div class="container flex-wrap flex-lg-nowrap">
+            <div class="me-2 me-md-auto">
+              <a href="/" class="d-inline-flex align-items-center navbar-brand"><span class="navbar-brand-group"></span></a>
+              <a href="/ko" class="navbar-brand">Rei Blog</a>
+            </div>
+            <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+              <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
+                <li class="nav-item"><a href="/ko/develop" class="nav-link text-nowrap">Develop</a></li>
+                <li class="nav-item"><a href="/ko/apps" class="nav-link text-nowrap">Apps</a></li>
+                <li class="nav-item"><a href="/ko/info" class="nav-link text-nowrap">Info</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="ig-main-content">
+        <div style="padding-top: 32px; padding-bottom: 32px">
+          <div class="apps-detail-hero">
+            <img src="/images/nyao_app_icon.png" alt="Nyao icon" class="apps-detail-icon" />
+            <div class="apps-detail-heading">
+              <h1>Nyao</h1>
+              <p class="apps-detail-tagline">스케치, 캔버스, 프레젠테이션</p>
+            </div>
+          </div>
+          <p class="lead mt-3">간단한 스케치부터 회의·발표 중 실시간 주석까지, Nyao로 화면 위에 바로 그려보세요.</p>
+        </div>
+        <div class="apps-detail-grid">
+          <div class="apps-detail-card">
+            <h3>Key features</h3>
+            <ul>
+              <p>macOS 전용 앱</p>
+            </ul>
+          </div>
+          <div class="apps-detail-card">
+            <h3>Tech stack</h3>
+            <div class="apps-detail-stack">
+              <span class="apps-badge">AppKit</span>
+              <span class="apps-badge">SwiftUI</span>
+              <span class="apps-badge">Metal</span>
+              <span class="apps-badge">CoreGraphics</span>
+            </div>
+          </div>
+        </div>
+        <h3>화면 위에 바로 그리는 실시간 스케치 툴, Nyao</h3>
+        <p>간단한 스케치부터 회의·발표 중 실시간 주석까지, Nyao로 화면 위에 바로 그려보세요.<br /> Nyao는 투명 캔버스를 통해 다른 앱 위에서도 자연스럽게 그릴 수 있는 스케치/주석 앱입니다.<br /> 문서, 웹, 디자인 시안, 슬라이드를 보면서 핵심을 즉시 강조하고 설명할 수 있으며, Metal 기반 렌더링으로 가볍고 빠른 반응성과 부드러운 스트로크를 제공합니다.</p>
+        <h3 class="mt-5">주요 기능</h3>
+        <ul>
+          <li><p class="m-0">투명 캔버스 오버레이: 다른 앱 위에 겹쳐 그리듯 작업하고, 캔버스 투명도를 자유롭게 조절</p></li>
+          <li><p class="m-0">빠른 창 표시/숨김: 필요할 때 즉시 띄우고, 필요 없을 때는 깔끔하게 숨김</p></li>
+          <li><p class="m-0">드로우 모드 / 클릭스루 모드: 상황에 맞게 캔버스 입력 방식을 전환</p></li>
+          <li><p class="m-0">커스텀 브러시 등록: 자주 쓰는 브러시를 내 작업 스타일에 맞게 구성</p></li>
+          <li><p class="m-0">파일 저장 및 PNG 내보내기: 작업 결과를 간편하게 저장하고 공유</p></li>
+          <li><p class="m-0">단축키 커스터마이징: 일부 단축키를 원하는 키로 자유롭게 변경</p></li>
+        </ul>
+        <h3 class="mt-5">이런 순간에 유용해요</h3>
+        <ul>
+          <li><p class="m-0">미팅/발표 중 화면 공유와 함께 핵심 내용을 즉석에서 표시하고 설명할 때</p></li>
+          <li><p class="m-0">브라우저·문서·디자인 툴 위에 체크, 표시, 낙서로 빠르게 의견을 남길 때</p></li>
+          <li><p class="m-0">레퍼런스를 보며 투명 캔버스로 트레이싱하거나 구도를 빠르게 잡을 때</p></li>
+        </ul>
+        <a href="/ko/apps" class="apps-detail-back">Back to Apps</a>
+      </div>
+    </div>
+    <script src="/js/ambient.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Rei315" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>Info</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://rei315.github.io/ko/info" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Rei Blog" />
+    <meta property="og:title" content="Info" />
+    <meta name="twitter:title" content="Info" />
+    <meta property="og:url" content="https://rei315.github.io/ko/info" />
+    <meta name="twitter:domain" content="rei315.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <link href="/css/site.css" rel="stylesheet" />
+    <link href="/css/ambient.css" rel="stylesheet" />
+  </head>
+  <body>
+    <canvas id="ambient-canvas" data-ambient-season="winter" aria-hidden="true" class="ambient-canvas"></canvas>
+    <div class="page-frame">
+      <div class="language-switcher-row">
+        <span class="language-switcher"><a href="/info" class="language-switcher__link">English</a><a href="/ko/info" class="language-switcher__link language-switcher__link--active">한국어</a><a href="/ja/info" class="language-switcher__link">日本語</a></span>
+      </div>
+      <header>
+        <nav class="navbar navbar-expand-md">
+          <div class="container flex-wrap flex-lg-nowrap">
+            <div class="me-2 me-md-auto">
+              <a href="/" class="d-inline-flex align-items-center navbar-brand"><span class="navbar-brand-group"></span></a>
+              <a href="/ko" class="navbar-brand">Rei Blog</a>
+            </div>
+            <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+              <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
+                <li class="nav-item"><a href="/ko/develop" class="nav-link text-nowrap">Develop</a></li>
+                <li class="nav-item"><a href="/ko/apps" class="nav-link text-nowrap">Apps</a></li>
+                <li class="nav-item"><a href="/ko/info" class="nav-link active text-nowrap" aria-current="page">Info</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="ig-main-content">
+        <div>
+          <div class="info-hero" style="padding-top: 48px; padding-bottom: 48px">
+            <div class="info-hero-copy">
+              <h1>Rei (MinGuk Kim)</h1>
+              <p class="info-hero-role">iOS/macOS App Developer</p>
+              <p class="info-hero-summary">Building calm, graphics-forward apps and tools.</p>
+            </div>
+            <div class="info-hero-badge">
+              <img src="/images/profile_icon.PNG" alt="Cat icon" class="info-avatar" />
+            </div>
+          </div>
+          <div class="info-grid" style="padding-bottom: 48px">
+            <div class="info-card">
+              <p class="info-card-title">Profile</p>
+              <p class="info-card-body">iOS/macOS App Developer</p>
+            </div>
+            <div class="info-card">
+              <p class="info-card-title">Likes</p>
+              <div class="info-badges">
+                <span class="info-badge">graphics programming</span>
+                <span class="info-badge">cats</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <p class="info-card-title">SNS</p>
+              <a href="https://x.com/nekodoko315" class="info-link">X / @nekodoko315</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/ambient.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
