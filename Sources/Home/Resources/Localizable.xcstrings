@@ -1,0 +1,44 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "nyao.feature.0" : {
+      "extractionState" : "manual"
+    },
+    "nyao.feature.1" : {
+      "extractionState" : "manual"
+    },
+    "nyao.feature.2" : {
+      "extractionState" : "manual"
+    },
+    "nyao.summary" : {
+      "extractionState" : "manual"
+    },
+    "nyao.tagline" : {
+      "extractionState" : "manual"
+    },
+    "nyao.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyao"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyao Sketch"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyao"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.1"
+}
