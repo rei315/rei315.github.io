@@ -10,6 +10,7 @@ public enum AppModulePages {
     pages.append(contentsOf: AppsEntry.all(language: language).map { $0 as any StaticPage })
     pages.append(contentsOf: AppsPage.all(language: language).map { $0 as any StaticPage })
     pages.append(NyaoFAQPage(language: language))
+    pages.append(NyaoPrivacyPolicyPage(language: language))
     return pages
   }
 }

@@ -142,7 +142,15 @@ public struct AppsEntry: StaticPage, Identifiable {
     return language.prefixedPath(base)
   }
 
+  public static func subpagePath(for appID: String, segment: String, language: SupportedLanguage) -> String {
+    language.prefixedPath("apps/\(appID)/\(segment)")
+  }
+
   public static func faqPath(for appID: String, language: SupportedLanguage) -> String {
-    language.prefixedPath("apps/\(appID)/faq")
+    subpagePath(for: appID, segment: "faq", language: language)
+  }
+
+  public static func privacyPolicyPath(for appID: String, language: SupportedLanguage) -> String {
+    subpagePath(for: appID, segment: "privacy-policy", language: language)
   }
 }
