@@ -64,7 +64,7 @@ Depending on where you live, you may have rights regarding your personal informa
 
 Residents of certain U.S. states may have additional rights under applicable state privacy laws.
 
-To exercise rights, contact us at: [alsrnr315@gmail.com](mailto:alsrnr315@gmail.com)  
+To exercise rights, contact us at: [nekodoko315@gmail.com](mailto:nekodoko315@gmail.com)  
 
 <br><br>
 ## 7. Security
@@ -80,4 +80,4 @@ We may update this Privacy Policy from time to time. Material changes will be co
 ## 9. Contact
 
 - Operator: KIM MINGUK
-- Email: [alsrnr315@gmail.com](mailto:alsrnr315@gmail.com)
+- Email: [nekodoko315@gmail.com](mailto:nekodoko315@gmail.com)

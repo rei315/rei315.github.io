@@ -82,7 +82,7 @@ Firebaseの提供元がGoogle LLCであるため、取得情報は米国その�
 ## 8. お問い合わせ窓口
 
 - 運営者: KIM MINGUK
-- メール: [alsrnr315@gmail.com](mailto:alsrnr315@gmail.com)
+- メール: [nekodoko315@gmail.com](mailto:nekodoko315@gmail.com)
 
 <br><br>
 ## 9. 改定
