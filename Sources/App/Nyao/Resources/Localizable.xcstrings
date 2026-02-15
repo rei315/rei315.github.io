@@ -352,19 +352,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nyao currently supports macOS. You can use it on a Mac with standard keyboard/mouse input or pen input devices. Other operating systems are not supported yet."
+            "value" : "Nyao currently supports macOS 15.0 or later. You can use it on a Mac with standard keyboard/mouse input or pen input devices. Other operating systems are not supported yet."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nyaoは現在、macOSをサポートしています。Mac上でキーボード／マウス入力やペン入力デバイスと組み合わせて利用できます。ほかのOSはまだサポートしていません。"
+            "value" : "Nyaoは現在、macOS 15.0以降をサポートしています。Mac上でキーボード／マウス入力やペン入力デバイスと組み合わせて利用できます。ほかのOSはまだサポートしていません。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nyao는 현재 macOS를 지원합니다. Mac 기기에서 키보드/마우스 입력 또는 펜 입력 장치와 함께 사용할 수 있으며, 다른 운영체제는 아직 지원하지 않습니다."
+            "value" : "Nyao는 현재 macOS 15.0 이상을 지원합니다. Mac 기기에서 키보드/마우스 입력 또는 펜 입력 장치와 함께 사용할 수 있으며, 다른 운영체제는 아직 지원하지 않습니다."
           }
         }
       }
@@ -645,6 +645,29 @@
         }
       }
     },
+    "nyao.feature.0" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A macOS-exclusive app"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS専用アプリ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 전용 앱"
+          }
+        }
+      }
+    },
     "nyao.privacy.error.unavailable" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -733,29 +756,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nyao 개인정보 처리방침"
-          }
-        }
-      }
-    },
-    "nyao.feature.0" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A macOS-exclusive app"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "macOS専用アプリ"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "macOS 전용 앱"
           }
         }
       }
