@@ -22,21 +22,45 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Swift 6.2
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: "6.2"
+
+      - name: Build site
+        run: |
+          rm -rf Build
+          swift run rei315
+
+      - name: Validate generated pages
+        run: |
+          test -f Build/ko/index.html
+          test -f Build/ja/index.html
+          test -f Build/apps/nyao/index.html
+
+      - name: Localization smoke checks
+        run: |
+          grep -q "간단한 스케치" Build/ko/apps/nyao/index.html
+          grep -q "簡単なスケッチ" Build/ja/apps/nyao/index.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./Build"
+
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './Build'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
