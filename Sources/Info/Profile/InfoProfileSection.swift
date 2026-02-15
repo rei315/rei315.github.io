@@ -17,7 +17,7 @@ public struct InfoProfileSection: HTML {
         .class("info-hero-copy")
 
         Section {
-          Image("/images/profile_icon.PNG", description: "Cat icon")
+          Image("/images/nyao_app_icon.png", description: "Cat icon")
             .class("info-avatar")
         }
         .class("info-hero-badge")
