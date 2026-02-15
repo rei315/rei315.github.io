@@ -94,7 +94,7 @@ Nyao는 대부분의 드로잉 데이터(캔버스 파일, 이미지, 브러시,
 ## 8. 개인정보 보호책임자 및 문의처
 
 - 운영자(개인정보 처리자): KIM MINGUK
-- 문의 이메일: [nekodoko315@gmail.com](mailto:nekodoko315@gmail.com)
+- 문의 이메일: [{{NYAO_SUPPORT_EMAIL}}](mailto:{{NYAO_SUPPORT_EMAIL}})
 
 개인정보 관련 문의, 권리 행사 요청, 불만처리는 위 연락처로 접수할 수 있습니다.
 

@@ -375,19 +375,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "If you encounter a bug, please restart Nyao first and check whether it can be reproduced with simple steps. If the issue persists, please include your macOS version, app version, and reproduction steps, and contact us at the email address below.\n\nContact\nEmail: nekodoko315@gmail.com"
+            "value" : "If you encounter a bug, please restart Nyao first and check whether it can be reproduced with simple steps. If the issue persists, please include your macOS version, app version, and reproduction steps when contacting us."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "不具合が発生した場合は、まずNyaoを再起動し、簡単な手順で再現するかご確認ください。継続して発生する場合は、macOSバージョン・アプリバージョン・再現手順を添えて、下記メールアドレスまでお問い合わせくださいますようお願いいたします。\n\nお問い合わせ先\nメールアドレス：nekodoko315@gmail.com"
+            "value" : "不具合が発生した場合は、まずNyaoを再起動し、簡単な手順で再現するかご確認ください。継続して発生する場合は、macOSバージョン・アプリバージョン・再現手順を添えてお問い合わせください。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "사용 중 버그가 발생하면 먼저 Nyao를 재시작하고 간단한 단계에서 재현되는지 확인해 주세요. 문제가 계속되면 macOS 버전, 앱 버전, 재현 절차를 함께 정리해 아래 이메일 주소로 문의해 주시기 바랍니다.\n\n문의처\n이메일: nekodoko315@gmail.com"
+            "value" : "사용 중 버그가 발생하면 먼저 Nyao를 재시작하고 간단한 단계에서 재현되는지 확인해 주세요. 문제가 계속되면 macOS 버전, 앱 버전, 재현 절차를 함께 정리해 문의해 주시기 바랍니다."
           }
         }
       }
@@ -434,6 +434,75 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nyao로 돌아가기"
+          }
+        }
+      }
+    },
+    "nyao.faq.contact.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For questions, feedback, or bug reports, please contact us at the email address below."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ご質問・ご意見・不具合のご報告は、下記メールアドレスまでお問い合わせください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "문의 사항, 의견 또는 버그 제보는 아래 이메일 주소로 보내 주시기 바랍니다."
+          }
+        }
+      }
+    },
+    "nyao.faq.contact.email" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email: [{{NYAO_SUPPORT_EMAIL}}](mailto:{{NYAO_SUPPORT_EMAIL}})"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メールアドレス: [{{NYAO_SUPPORT_EMAIL}}](mailto:{{NYAO_SUPPORT_EMAIL}})"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이메일: [{{NYAO_SUPPORT_EMAIL}}](mailto:{{NYAO_SUPPORT_EMAIL}})"
+          }
+        }
+      }
+    },
+    "nyao.faq.contact.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お問い合わせ先"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "문의처"
           }
         }
       }

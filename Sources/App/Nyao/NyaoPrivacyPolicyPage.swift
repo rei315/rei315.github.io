@@ -61,7 +61,7 @@ public struct NyaoPrivacyPolicyPage: StaticPage {
       return nil
     }
 
-    return markdown
+    return NyaoContactInfo.injectingSupportEmail(into: markdown)
   }
 
   private func markdownFilename(for language: SupportedLanguage) -> String {
