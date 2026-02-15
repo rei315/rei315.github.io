@@ -25,6 +25,7 @@ struct MySite: Site {
     MainLayout(season: ambientSeason)
   }
   var lightTheme: (any Theme)? = MyTheme()
+  var darkTheme: (any Theme)? = nil
 
   var staticPages: [any StaticPage] {
     var pages: [any StaticPage] = []

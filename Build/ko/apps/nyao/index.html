@@ -10,50 +10,6 @@
     <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
     <link href="/css/ignite-core.min.css" rel="stylesheet" />
     <link href="https://rei315.github.io/ko/apps/nyao" rel="canonical" />
-    <script>(function() {
-    function getThemePreference() {
-        return localStorage.getItem('custom-theme') || 'auto';
-    }
-
-    function applyTheme(themeID) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
-        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
-        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
-
-        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
-        document.documentElement.setAttribute('data-theme-state', themeID);
-    }
-
-    function applySyntaxTheme() {
-        const syntaxTheme = getComputedStyle(document.documentElement)
-            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
-
-        if (!syntaxTheme) return;
-
-        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
-            link.setAttribute('disabled', 'disabled');
-        });
-
-        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
-        if (themeLink) {
-            themeLink.removeAttribute('disabled');
-        }
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        const currentTheme = getThemePreference();
-        if (currentTheme === 'auto') {
-            applyTheme('auto');
-            applySyntaxTheme();
-        }
-    });
-
-    const savedTheme = getThemePreference();
-    applyTheme(savedTheme);
-    applySyntaxTheme();
-})();
-</script>
     <meta property="og:site_name" content="Rei Blog" />
     <meta property="og:title" content="Nyao" />
     <meta name="twitter:title" content="Nyao" />
@@ -63,6 +19,14 @@
     <meta name="twitter:dnt" content="on" />
     <link href="/css/site.css" rel="stylesheet" />
     <link href="/css/ambient.css" rel="stylesheet" />
+    <script>(() => {
+  const root = document.documentElement;
+  root.setAttribute('data-bs-theme', 'light');
+  root.setAttribute('data-theme-state', 'light');
+  try {
+    localStorage.setItem('custom-theme', 'light');
+  } catch (_) {}
+})();</script>
   </head>
   <body>
     <canvas id="ambient-canvas" data-ambient-season="winter" aria-hidden="true" class="ambient-canvas"></canvas>
@@ -94,16 +58,16 @@
             <img src="/images/nyao_app_icon.png" alt="Nyao icon" class="apps-detail-icon" />
             <div class="apps-detail-heading">
               <h1>Nyao</h1>
-              <p class="apps-detail-tagline">스케치, 캔버스, 프레젠테이션</p>
+              <p class="apps-detail-tagline">Sketch, Canvas, Presentation</p>
             </div>
           </div>
-          <p class="lead mt-3">간단한 스케치부터 회의·발표 중 실시간 주석까지, Nyao로 화면 위에 바로 그려보세요.</p>
+          <p class="lead mt-3">From quick sketches to live annotations during meetings and presentations, draw directly on your screen with Nyao.</p>
         </div>
         <div class="apps-detail-grid">
           <div class="apps-detail-card">
             <h3>Key features</h3>
             <ul>
-              <p>macOS 전용 앱</p>
+              <p>A macOS-exclusive app</p>
             </ul>
           </div>
           <div class="apps-detail-card">
@@ -116,23 +80,29 @@
             </div>
           </div>
         </div>
-        <h3>화면 위에 바로 그리는 실시간 스케치 툴, Nyao</h3>
-        <p>간단한 스케치부터 회의·발표 중 실시간 주석까지, Nyao로 화면 위에 바로 그려보세요.<br /> Nyao는 투명 캔버스를 통해 다른 앱 위에서도 자연스럽게 그릴 수 있는 스케치/주석 앱입니다.<br /> 문서, 웹, 디자인 시안, 슬라이드를 보면서 핵심을 즉시 강조하고 설명할 수 있으며, Metal 기반 렌더링으로 가볍고 빠른 반응성과 부드러운 스트로크를 제공합니다.</p>
-        <h3 class="mt-5">주요 기능</h3>
+        <h3>Nyao, a real-time sketch tool that lets you draw directly on your screen</h3>
+        <p>From quick sketches to live annotations during meetings and presentations, Nyao helps you draw right on top of your screen.<br /> With a transparent canvas, Nyao works naturally over other apps, making it easy to sketch and annotate in context. Highlight key points and explain ideas instantly while viewing documents, web pages, design comps, or slides. Powered by Metal-based rendering, Nyao delivers lightweight performance, fast responsiveness, and smooth, fluid strokes.</p>
+        <h3 class="mt-5">Key Features</h3>
         <ul>
-          <li><p class="m-0">투명 캔버스 오버레이: 다른 앱 위에 겹쳐 그리듯 작업하고, 캔버스 투명도를 자유롭게 조절</p></li>
-          <li><p class="m-0">빠른 창 표시/숨김: 필요할 때 즉시 띄우고, 필요 없을 때는 깔끔하게 숨김</p></li>
-          <li><p class="m-0">드로우 모드 / 클릭스루 모드: 상황에 맞게 캔버스 입력 방식을 전환</p></li>
-          <li><p class="m-0">커스텀 브러시 등록: 자주 쓰는 브러시를 내 작업 스타일에 맞게 구성</p></li>
-          <li><p class="m-0">파일 저장 및 PNG 내보내기: 작업 결과를 간편하게 저장하고 공유</p></li>
-          <li><p class="m-0">단축키 커스터마이징: 일부 단축키를 원하는 키로 자유롭게 변경</p></li>
+          <li><p class="m-0">Transparent Canvas Overlay: Draw as if layering over other apps, with freely adjustable canvas opacity</p></li>
+          <li><p class="m-0">Quick Show/Hide Window: Bring it up instantly when needed, and hide it cleanly when you don’t</p></li>
+          <li><p class="m-0">Draw Mode / Click-Through Mode: Switch input behavior depending on your workflow</p></li>
+          <li><p class="m-0">Custom Brush Presets: Set up frequently used brushes to match your drawing style</p></li>
+          <li><p class="m-0">Save Files &amp; Export PNG: Save your work and share results with ease</p></li>
+          <li><p class="m-0">Shortcut Customization: Reassign selected shortcuts to your preferred keys</p></li>
         </ul>
-        <h3 class="mt-5">이런 순간에 유용해요</h3>
+        <h3 class="mt-5">Great For Moments Like These</h3>
         <ul>
-          <li><p class="m-0">미팅/발표 중 화면 공유와 함께 핵심 내용을 즉석에서 표시하고 설명할 때</p></li>
-          <li><p class="m-0">브라우저·문서·디자인 툴 위에 체크, 표시, 낙서로 빠르게 의견을 남길 때</p></li>
-          <li><p class="m-0">레퍼런스를 보며 투명 캔버스로 트레이싱하거나 구도를 빠르게 잡을 때</p></li>
+          <li><p class="m-0">Marking up and explaining key points live while screen sharing in meetings or presentations</p></li>
+          <li><p class="m-0">Leaving fast visual feedback—checks, highlights, and quick sketches—over browsers, documents, or design tools</p></li>
+          <li><p class="m-0">Tracing references on a transparent canvas or blocking out compositions quickly</p></li>
         </ul>
+        <div class="mt-5">
+          <div class="apps-detail-support-links">
+            <a href="/ko/apps/nyao/faq" class="apps-detail-support-link">Frequently Asked Questions</a>
+            <a href="/ko/apps/nyao/privacy-policy" class="apps-detail-support-link">Privacy Policy</a>
+          </div>
+        </div>
         <a href="/ko/apps" class="apps-detail-back">Back to Apps</a>
       </div>
     </div>

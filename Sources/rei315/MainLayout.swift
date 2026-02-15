@@ -14,6 +14,18 @@ struct MainLayout: Layout {
     Head {
       MetaLink(href: "/css/site.css", rel: .stylesheet)
       MetaLink(href: "/css/ambient.css", rel: .stylesheet)
+      Script(
+        code: """
+        (() => {
+          const root = document.documentElement;
+          root.setAttribute('data-bs-theme', 'light');
+          root.setAttribute('data-theme-state', 'light');
+          try {
+            localStorage.setItem('custom-theme', 'light');
+          } catch (_) {}
+        })();
+        """
+      )
     }
     
     Body {

@@ -39,6 +39,7 @@ let package = Package(
       path: "Sources/App/Nyao",
       resources: [
         .process("Resources"),
+        .copy("privacy"),
       ]
     ),
     .target(

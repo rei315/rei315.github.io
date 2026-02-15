@@ -53,6 +53,22 @@ extension AppsIndex {
         Text(language.localized("nyao.description.scene.1", bundle: .module))
         Text(language.localized("nyao.description.scene.2", bundle: .module))
       }
+
+      AppSupportLinksSection(
+        items: [
+          AppSupportLinkItem(
+            id: "faq",
+            label: language.localized("nyao.faq.link.cta", bundle: .module),
+            target: AppsEntry.faqPath(for: "nyao", language: language)
+          ),
+          AppSupportLinkItem(
+            id: "privacy-policy",
+            label: language.localized("nyao.privacy.link.cta", bundle: .module),
+            target: AppsEntry.privacyPolicyPath(for: "nyao", language: language)
+          ),
+        ]
+      )
+      .margin(.top, .xLarge)
     }
   }
 }
