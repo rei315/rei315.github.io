@@ -375,19 +375,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "If you run into a bug, restart Nyao first and try reproducing it with simple steps. If the issue persists, collect your environment details (macOS version, app version, reproduction steps) and report it through the official contact channel."
+            "value" : "If you encounter a bug, please restart Nyao first and check whether it can be reproduced with simple steps. If the issue persists, please include your macOS version, app version, and reproduction steps, and contact us at the email address below.\n\nContact\nEmail: nekodoko315@gmail.com"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "不具合が発生した場合は、まずNyaoを再起動し、簡単な手順で再現するか確認してください。継続して発生する場合は、macOSバージョン・アプリバージョン・再現手順を整理して、公式の問い合わせ窓口から報告してください。"
+            "value" : "不具合が発生した場合は、まずNyaoを再起動し、簡単な手順で再現するかご確認ください。継続して発生する場合は、macOSバージョン・アプリバージョン・再現手順を添えて、下記メールアドレスまでお問い合わせくださいますようお願いいたします。\n\nお問い合わせ先\nメールアドレス：nekodoko315@gmail.com"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "사용 중 버그가 발생하면 먼저 Nyao를 재시작하고 간단한 단계에서 재현되는지 확인해 주세요. 문제가 계속되면 macOS 버전, 앱 버전, 재현 절차를 정리해 공식 문의 채널로 제보해 주세요."
+            "value" : "사용 중 버그가 발생하면 먼저 Nyao를 재시작하고 간단한 단계에서 재현되는지 확인해 주세요. 문제가 계속되면 macOS 버전, 앱 버전, 재현 절차를 함께 정리해 아래 이메일 주소로 문의해 주시기 바랍니다.\n\n문의처\n이메일: nekodoko315@gmail.com"
           }
         }
       }

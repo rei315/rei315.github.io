@@ -33,6 +33,19 @@ jobs:
         with:
           swift-version: "6.2"
 
+      - name: Cache SwiftPM
+        uses: actions/cache@v4
+        with:
+          path: |
+            .build
+            ~/.swiftpm
+            ~/Library/Caches/org.swift.swiftpm
+            ~/Library/org.swift.swiftpm
+          key: ${{ runner.os }}-swift-6.2-swiftpm-${{ hashFiles('Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-swift-6.2-swiftpm-
+            ${{ runner.os }}-swiftpm-
+
       - name: Build site
         run: |
           rm -rf Build
